@@ -1,0 +1,56 @@
+Chat Application
+
+Overview
+
+This project is a real-time chat application developed in Java using the client-server architecture. The server manages multiple client connections, allowing users to exchange messages seamlessly. Clients can connect to the server and interact with each other in real time.
+Features
+Server
+Listens for client connections on a specified port.
+Supports multiple simultaneous client connections.
+Broadcasts received messages to all connected users.
+Manages client connections and disconnections efficiently.
+
+Client
+Connects to the server to join the chat.
+Sends messages and receives responses from other users.
+Displays incoming messages from other users.
+Prompts the user to enter a name before joining the chat.
+
+Requirements
+Java Development Kit (JDK 22 or later)
+Command-line interface (CLI) to run the application
+
+How to Run the Application
+
+1 Running the Server
+The server should be started first, allowing it to accept client connections. Upon launching, it displays a message indicating that it is running and waiting for client connections.
+
+2 Running Clients
+Multiple clients can be started simultaneously. Each client is required to enter a username upon launch and can then send and receive messages from other connected users.
+
+3 Testing Communication
+Sending Messages: Users can type and send messages, which will be displayed to all connected users in the chat.
+Handling Duplicate Messages: The server ensures that duplicate messages are processed correctly.
+Client Disconnection: If a client disconnects, the remaining users should continue communicating without issues, and the server should handle disconnections efficiently.
+
+Implementation Details
+
+Server
+Responsible for handling client connections and managing communication.
+Includes essential components such as connection management, user name storage, and message routing.
+Receives messages from clients and broadcasts them to all connected users.
+
+Client
+Allows users to connect to the server and participate in the chat.
+Requires users to enter a name before joining the chat.
+Manages both outgoing and incoming messages efficiently.
+Uses multithreading to receive messages from the server while allowing the user to type responses.
+
+Troubleshooting
+Connection Issues: Ensure the server is running and that the client is connecting to the correct server address and port.
+Messages Not Appearing: Verify that messages are being sent correctly and that the server is broadcasting them properly.
+Handling Client Disconnections: Ensure the server correctly handles user disconnections without disrupting the chat session.
+
+License
+
+This project is licensed under the MIT License. For more details, refer to the license file.
